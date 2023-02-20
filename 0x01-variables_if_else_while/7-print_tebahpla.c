@@ -6,13 +6,14 @@
  * Return: Always 0 (success)
  */
 
+
 int main(void)
 {
-	int a;
+	int ch;
 
-	for (a = 'z'; a >= 'a'; a--)
+	for (ch = 'z'; ch <= 'a'; ch--)
 	{
-		putchar(a);
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
