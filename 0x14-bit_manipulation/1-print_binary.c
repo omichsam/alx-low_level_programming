@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary - print binary representation of a number
@@ -6,7 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-    unsigned long int temp;
+    unsigned long int _temp;
     int shift_s;
 
     if (n == 0)
@@ -15,7 +16,7 @@ void print_binary(unsigned long int n)
         return;
     }
 
-    for (temp = n, shift_s = 0; (temp >>= 1) > 0; shift_s++)
+    for (_temp = n, shift_s = 0; (_temp >>= 1) > 0; shift_s++)
         ;
 
     for (; shift_s >= 0; shift_s--)
