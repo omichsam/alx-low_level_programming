@@ -8,12 +8,12 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int hold;
+	unsigned long int vh_hold;
 
 	if (index > 64)
 		return (-1);
 
-	hold = n >> index;
+	vh_hold = n >> index;
 
-	return (hold & 1);
+	return (vh_hold & 1);
 }
