@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * set_bit - sets value of a bit to 1 at a given index
@@ -8,14 +9,14 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int p;
+    unsigned long int kp;
 
-	if (index > 64)
-		return (-1);
+    if (index > 64)
+        return (-1);
 
-	for (p = 1; index > 0; index--, p *= 2)
-		;
-	*n += p;
+    for (kp = 1; index > 0; index--, kp *= 2)
+        ;
+    *n += kp;
 
-	return (1);
+    return (1);
 }
