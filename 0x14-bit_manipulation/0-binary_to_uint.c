@@ -1,4 +1,5 @@
-// #include <stdio.h>
+#include <stdio.h>
+#include "main.h"
 
 unsigned int binary_to_uint(const char *binary_string)
 {
@@ -11,7 +12,7 @@ unsigned int binary_to_uint(const char *binary_string)
 
     /* return if the value is different to 0 or 1*/
     for (index = 0; binary_string[index] != '\0'; index++)
-        if (binary_string[index]  != '0' && binary_string[index] != '1')
+        if (binary_string[index] != '0' && binary_string[index] != '1')
             return (0);
 
     /* converter array the number binary to int */
