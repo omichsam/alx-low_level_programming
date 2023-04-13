@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -29,21 +29,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
     close(fd);
 
     return num_read;
-}
+}*/
 
-/*
+///*
 
 #include "main.h"
 #include <stdlib.h>
 
-/ **
+/**
  * read_textfile - Reads a text file and prints it to POSIX stdout.
  * @filename: A pointer to the name of the file.
  * @letters: The number of letters the function should read and print.
  *
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
- * /
+ * Returns  " 0 " If the function fails or filename is NULL
+ * or
+ *    O/w - the actual number of bytes the function can read and print.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
     ssize_t o, r, w;
@@ -89,4 +90,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
     close(o);
 
     return (w);
-}*/
+}
