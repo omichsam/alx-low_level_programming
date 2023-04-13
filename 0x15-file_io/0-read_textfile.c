@@ -1,38 +1,3 @@
-/*#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
-
-ssize_t read_textfile(const char *filename, size_t letters)
-{
-    if (!filename)
-        return 0;
-
-    int fd = open(filename, O_RDONLY);
-    if (fd == -1)
-        return 0;
-
-    char *buffer = malloc(sizeof(char) * (letters + 1));
-    if (!buffer)
-        return 0;
-
-    ssize_t num_read = read(fd, buffer, letters);
-    if (num_read == -1)
-        return 0;
-
-    ssize_t num_written = write(STDOUT_FILENO, buffer, num_read);
-    if (num_written == -1 || num_written != num_read)
-        return 0;
-
-    free(buffer);
-    close(fd);
-
-    return num_read;
-}*/
-
-///*
-
 #include "main.h"
 #include <stdlib.h>
 
