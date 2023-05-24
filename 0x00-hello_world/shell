@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+void display_prompt()
+{
+    char prompt[] = "#cisfun$";
+    printf("%s ", prompt);
+}
+
+int main()
+{
+    char command[100];
+
+    while (1)
+    {
+        display_prompt();
+        fgets(command, sizeof(command), stdin);
+        command[strcspn(command, "\n")] = '\0'; /*Remove trailing newline*/
+
+        pid_t pid = fork();
+        if (pid == -1)
+        {
+            perror("fork");
+            exit(EXIT_FAILURE);
+        }
+        else if (pid == 0)
+        {
+            /**
+             * Child process
+             *
+             */
+            char *args[] = {command, NULL};
+            execve(command, args, NULL);
+            perror("execve");
+            exit(EXIT_FAILURE);
+        }
+        else
+        {
+            /**
+             * Parent process
+             * */
+            wait(NULL);
+        }
+    }
+
+    return 0;
+}
