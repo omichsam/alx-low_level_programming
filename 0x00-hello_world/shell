@@ -5,7 +5,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
 /**
  * display_prompt - displays prompts
  *
