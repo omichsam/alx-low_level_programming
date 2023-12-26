@@ -277,4 +277,4 @@ Requirements:
 ---
 
 ## Author
-* **Samson Michira** - [tassavarat](https://github.com/omichsam)
+* **Sam Michira** - [omichsam](https://github.com/omichsam)
